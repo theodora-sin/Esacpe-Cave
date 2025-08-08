@@ -40,7 +40,7 @@ https://pin.it/6DKoiRDs1
 https://pin.it/3RYa6jPU3
 https://pin.it/6G4ZTfp3w
 https://pin.it/600Zvbh6v
-
+[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme) 
 https://en.wikipedia.org/wiki/Sunstone 
 https://www.geologyin.com/2018/07/what-causes-pink-color-of-rose-quartz.html 
 https://www.burtonsgemsandopals.com/products/2-29ct-peridot-pear-shape?srsltid=AfmBOooMaC2AubcOaE4GKlLPiinC30dlufTD_GlekpHPFG_OTQuRNVVA 
