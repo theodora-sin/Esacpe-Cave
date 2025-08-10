@@ -7,7 +7,9 @@ function instructionScreen() {
   textFont("Arial");
 
   text("Instructions", width / 2, 50);
-
+  if (playerCharacter) {
+    image(minipic3, 500, 450, 100, 150);
+  }
   textSize(16);
   textAlign(LEFT);
   text(
@@ -45,7 +47,7 @@ function initMinigame() {
   // Create the player
   player1 = new Sprite(200, 20, 30,);
   player1.color = "black";
-
+  image(minipic3, 500, 450 + 100, 100, 150);
 //create avioders
   avoider1 = new Sprite(50, 100, 80, 20, "k");
   avoider1.color = "green";
@@ -186,6 +188,8 @@ function youWin() {
   textAlign(CENTER);
   textSize(20);
   text('You win! \nHidden word: waits', 200, 200);
+  image(playerCharacter, 50, height - 200, 100, 150);
+  image(minipic2,400, height / 2-100 + 100, 100, 150);
 
   if (!gamecontinueButton3) {
     gamecontinueButton3 = new Sprite(width / 2, height / 2 + 40, 140, 40, "static");
@@ -210,6 +214,8 @@ function drawLoseScreen() {
   textAlign(LEFT);
   textSize(28);
   text("You lose", 250, height / 2);
+  image(playerCharacter, 50, height - 200, 100, 150);
+  image(minipic2,400, height / 2-100 + 100, 100, 150);
 
   if (!gamecontinueButton3) {
     gamecontinueButton3 = new Sprite(width / 2, height / 2 + 40, 140, 40, "static");
