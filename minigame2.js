@@ -91,7 +91,7 @@ function initializeMazeGame() {
 
 function runMazeGame() {
   background(bg10);
-  image(minipic2, 50, height / 2-100 + 100, 100, 150);
+  image(minipic2, 500, 450 + 100, 100, 150);
   fill(0, 255, 0);
   rect(285, 70, 75, 25);
   fill(255);
