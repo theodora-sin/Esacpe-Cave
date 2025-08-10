@@ -13,7 +13,7 @@ function mazegame() {
   text("You stumble upon a winding maze filled\nwith traps and dead ends. The\ncave shifts as if it's alive,\ntrying to stop you from escaping.\nGoal: Navigate the maze safely using arrow keys\nwithout touching the red traps.\nReach the exit to unlock the next clue of hope.", width/2 - 30, 160);
 
   if (playerCharacter) {
-    image(minipic2, 500, 500, 100, 150);
+    image(minipic2, 500, 450, 100, 150);
     textAlign(CENTER);
   }
 //  image(minipic1, 250, height / 2-100 + 100, 100, 150);
@@ -110,7 +110,7 @@ function runMazeGame() {
   text('Use arrow keys to navigate', 30, height - 10);
 
   if (playerCharacter && player) {
-    image(playerCharacter, player.x - 7, player.y - 7, 14, 14);
+    image(playerCharacter, 500,450,100,150);
   }
 
   if (player) {
@@ -150,7 +150,7 @@ function drawMazeWinScreen() {
   textSize(18);
   text("Hidden word: forward", width / 2, height / 2 + 20);
   image(playerCharacter, 50, height - 200, 100, 150);
-  image(minipic2, 50, height / 2-100 + 100, 100, 150);
+  image(minipic2,400, height / 2-100 + 100, 100, 150);
 
   if (!gamecontinueButton2) {
     gamecontinueButton2 = createSprite(width / 2, height / 2 + 80, 200, 50);
@@ -179,6 +179,7 @@ function drawMazeLoseScreen() {
   textSize(16);
   text("Unfortunately, you can't get any hint.", width / 2, height / 2 + 40);
   image(playerCharacter, 50, height - 200, 100, 150);
+  image(minipic2,400, height / 2-100 + 100, 100, 150);
 
   if (!gamecontinueButton2) {
     gamecontinueButton2 = createSprite(width / 2, height / 2 + 100, 200, 50);
