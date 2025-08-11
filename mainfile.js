@@ -59,7 +59,7 @@ function preload() {
   bg0 = loadImage("assets/background.jpeg");
   minipic1 = loadImage("assets/bat.png");
   minipic2= loadImage("assets/bear.png");
-  minipic3= loadImage("assets/Salamander.png");
+  minipi3= loadImage("assets/Salamander.png");
   gembgm=loadSound("music/diamond-found-190255.mp3");
   bgm=loadSound("music/magical.mp3");
 }
@@ -74,12 +74,9 @@ function setup() {
 /* DRAW LOOP REPEATS */
 function draw() {
   // Start background music on first frame
-  function startMusic() {
-    if (!isUserInteracted) {
-      bgm.loop();
-      bgm.setVolume(0.3);
-      isUserInteracted = true;
-    }
+  if (frameCount === 1 && bgm) {
+    bgm.loop();
+    bgm.setVolume(0.3);
   }
 
   console.log("Drawing screen:", screen);
@@ -182,4 +179,3 @@ function draw() {
     console.log("Unrecognized screen:", screen);
   }
 }
-
