@@ -70,15 +70,16 @@ function setup() {
   console.log("Setup executed");
   screen = 0;
 }
-
-/* DRAW LOOP REPEATS */
-function draw() {
-  // Start background music on first frame
-  if (frameCount === 1 && bgm) {
+function startMusic() {
+  if (!isUserInteracted) {
     bgm.loop();
     bgm.setVolume(0.3);
+    isUserInteracted = true;
   }
-
+}
+/* DRAW LOOP REPEATS */
+function draw() {
+  startMusic()
   console.log("Drawing screen:", screen);
 
   if (screen == 0) {
