@@ -34,6 +34,8 @@ function dillenma5(){
   }
 
   if (choosebutton11.mouse.presses()) {
+    gembgm.play();
+    gembgm.setVolume(0.3);
     choosebutton11.remove();
     choosebutton12.remove();
     choosebutton11= null;
@@ -57,7 +59,6 @@ function transtionscreen9(){
   text(" You lift your partner onto your back.\nIt’s hard.The cave is steep.\nBut after a long struggle,\nyou see light. You made it—together.",100,140);
   fill(255);
   textAlign(CENTER);
-  textAlign(BOLD);
   textSize(21);
   textFont("Nunito");
   text("You earn a gem!", width / 2, 268);
