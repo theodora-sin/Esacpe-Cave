@@ -146,8 +146,7 @@ function drawMazeWinScreen() {
   text("You Escaped the Maze!", width / 2, height / 2 - 20);
   textSize(18);
   text("Hidden word: forward", width / 2, height / 2 + 20);
-  image(playerCharacter, 50, height - 200, 100, 150);
-  image(minipic2,400, height / 2-100 + 100, 100, 150);
+  image(minipic2,300, height / 2-100 , 100, 150);
 
   if (!gamecontinueButton2) {
     gamecontinueButton2 = createSprite(width / 2, height / 2 + 80, 200, 50);
