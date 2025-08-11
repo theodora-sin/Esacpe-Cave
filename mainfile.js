@@ -30,6 +30,7 @@ let hasGuessed = false; // To track whether the user has already guessed, hidden
 let endButton; //ending message
 let minipic1,minipic2,minipic3; //minicharacter
 let gembgm,bgm;
+let isUserInteracted = false;
 
 /* PRELOAD LOADS FILES */
 function preload() {
