@@ -46,7 +46,7 @@ function dillenma5(){
 }
   // Draw collected gems at the top
   for (let i = 0; i < collectedGems.length; i++) {
-    image(collectedGems[i], 20 + i * 60, 20, 50, 50);
+    image(collectedGems[i], 20 + i * 60, 20, 50, 50); // Display collected gems
   }
 // transtionscreen9() function
 function transtionscreen9(){
