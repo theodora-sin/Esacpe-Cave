@@ -59,7 +59,6 @@ function transtionscreen7(){
 
   fill(255);
   textAlign(CENTER);
-  textAlign(BOLD);
   textSize(21);
   textFont("Nunito");
   text("You earn a gem!", width / 2, 255);
