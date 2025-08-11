@@ -73,111 +73,111 @@ function setup() {
 
 /* DRAW LOOP REPEATS */
 function draw() {
-
-    // Start background music on first frame
-    if (frameCount === 1 && bgm) {
-      bgm.loop();
-      bgm.setVolume(0.3);
-    }
-  console.log("Drawing screen:", screen);
-    if (screen == 0) {
-      startscreen();
-    } else if (screen == 1) {
-      screen1();
-    } else if (screen == 2) {
-      screen2();
-    } else if (screen == 3) {
-      dillenma1();
-    } else if (screen == 4) {
-      transtionscreen1();
-    } else if (screen == 5) {
-      transtionscreen2();
-    } else if (screen == 6) {
-      dillenma2();
-    } else if (screen == 7) {
-      transtionscreen3();
-    } else if (screen == 8) {
-      transtionscreen4();
-    } else if (screen == 9) {
-      if (!miniGameStarted) {
-        introScreen();
-      } else {
-        catchingGame();
-      }
-    } else if (screen == 100) {
-      gameOverScreen();
-    } else if (screen == 10) {
-      dillenma3();
-    } else if (screen == 11) {
-      transtionscreen5();
-    } else if (screen == 12) {
-      transtionscreen6();
-    } else if (screen == 13) {
-      try {
-        mazegame();
-      } catch (err) {
-        console.error("Error in screen 13 functions:", err);
-      }
-    } else if (screen == "maze_play") {
-      try {
-        runMazeGame();
-      } catch (err) {
-        console.error("Error in maze play:", err);
-      }
-    } else if (screen == "maze_win") {
-      try {
-        drawMazeWinScreen();
-      } catch (err) {
-        console.error("Error in maze win screen:", err);
-      }
-    } else if (screen == "maze_lose") {
-      try {
-        drawMazeLoseScreen();
-      } catch (err) {
-        console.error("Error in maze lose screen:", err);
-      }
-    } else if (screen == 14) {
-      dillenma4();
-    } else if (screen == 15) {
-      transtionscreen7();
-    } else if (screen == 16) {
-      transtionscreen8();
-    } else if (screen == 17) {
-      try {
-        if (!player1) {
-          instructionScreen();
-        } else {
-          playerMove();
-          resetAvoiders();
-          checkCollisions();
-        }
-      } catch (err) {
-        console.error("Error in screen 17 functions:", err);
-      }
-    } else if (screen == "lose") {
-      try {
-        drawLoseScreen();
-      } catch (err) {
-        console.error("Error in lose screen:", err);
-      }
-    }else if (screen == 18) {
-      dillenma5();
-    } else if (screen == 19) {
-      transtionscreen9();
-    } else if (screen == 20) {
-      transtionscreen10();
-    } else if (screen == 21) {
-      try {
-        hiddenMessageScreen();
-      } catch (err) {
-        console.error("Error in screen 21 functions:", err);
-      }
-    } else if (screen == 22) {
-      endmessagescreen();
-    } else {
-      console.log("Unrecognized screen:", screen);
-    }
+function draw() {
+  // Start background music on first frame
+  if (frameCount === 1 && bgm) {
+    bgm.loop();
+    bgm.setVolume(0.3);
   }
 
+  console.log("Drawing screen:", screen);
 
-/* FUNCTIONS */
+  if (screen == 0) {
+    startscreen();
+  } else if (screen == 1) {
+    screen1();
+  } else if (screen == 2) {
+    screen2();
+  } else if (screen == 3) {
+    dillenma1();
+  } else if (screen == 4) {
+    transtionscreen1();
+  } else if (screen == 5) {
+    transtionscreen2();
+  } else if (screen == 6) {
+    dillenma2();
+  } else if (screen == 7) {
+    transtionscreen3();
+  } else if (screen == 8) {
+    transtionscreen4();
+  } else if (screen == 9) {
+    if (!miniGameStarted) {
+      introScreen();
+    } else {
+      catchingGame();
+    }
+  } else if (screen == 100) {
+    gameOverScreen();
+  } else if (screen == 10) {
+    dillenma3();
+  } else if (screen == 11) {
+    transtionscreen5();
+  } else if (screen == 12) {
+    transtionscreen6();
+  } else if (screen == 13) {
+    try {
+      mazegame();
+    } catch (err) {
+      console.error("Error in screen 13 functions:", err);
+    }
+  } else if (screen == "maze_play") {
+    try {
+      runMazeGame();
+    } catch (err) {
+      console.error("Error in maze play:", err);
+    }
+  } else if (screen == "maze_win") {
+    try {
+      drawMazeWinScreen();
+    } catch (err) {
+      console.error("Error in maze win screen:", err);
+    }
+  } else if (screen == "maze_lose") {
+    try {
+      drawMazeLoseScreen();
+    } catch (err) {
+      console.error("Error in maze lose screen:", err);
+    }
+  } else if (screen == 14) {
+    dillenma4();
+  } else if (screen == 15) {
+    transtionscreen7();
+  } else if (screen == 16) {
+    transtionscreen8();
+  } else if (screen == 17) {
+    try {
+      if (!player1) {
+        instructionScreen();
+      } else {
+        playerMove();
+        resetAvoiders();
+        checkCollisions();
+      }
+    } catch (err) {
+      console.error("Error in screen 17 functions:", err);
+    }
+  } else if (screen == "lose") {
+    try {
+      drawLoseScreen();
+    } catch (err) {
+      console.error("Error in lose screen:", err);
+    }
+  } else if (screen == 18) {
+    dillenma5();
+  } else if (screen == 19) {
+    transtionscreen9();
+  } else if (screen == 20) {
+    transtionscreen10();
+  } else if (screen == 21) {
+    try {
+      hiddenMessageScreen();
+    } catch (err) {
+      console.error("Error in screen 21 functions:", err);
+    }
+  } else if (screen == 22) {
+    endmessagescreen();
+  } else {
+    console.log("Unrecognized screen:", screen);
+  }
+}
+
