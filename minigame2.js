@@ -92,7 +92,7 @@ function initializeMazeGame() {
 function runMazeGame() {
   background(bg10);
   image(minipic2, 500, 450, 100, 150);
-  image(playerCharacter,50,450,100,150);
+  image(playerCharacter,50,450,100,100);
   fill(0, 255, 0);
   rect(285, 70, 75, 25);
   fill(255);
