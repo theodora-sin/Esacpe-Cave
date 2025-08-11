@@ -1,6 +1,6 @@
 /* Global Variables */
-let collectedGems = [];//array
-let screen;// screen
+let collectedGems = []; // array
+let screen; // screen
 let charImg1, charImg2;
 let gemImage1, gemImage2, gemImage3, gemImage4, gemImage5;
 let bg0, bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg10, bg11, bg12, bg13, bg14;
@@ -9,27 +9,27 @@ let startButton, prefaceButton;
 let prefaceShown = false;
 let choosebutton1, choosebutton2, choosebutton3, choosebutton4, choosebutton5, choosebutton6, choosebutton7, choosebutton8, choosebutton9, choosebutton10, choosebutton11, choosebutton12;
 let continueButton1, continueButton2, continueButton3, continueButton4, continueButton5, continueButton6, continueButton7, continueButton8, continueButton9, continueButton10;
-let catcher;//minigame1
-let fallingObjects = [];//minigame1
-let score = 0;//minigame1
-let miniGameStarted = false;//minigame1
-let gamecontinueButton1;//minigame1
-let leftWall, rightWall;//minigame1
-let player, walls, obstacles;//minigame2
-let gamecontinueButton2;//minigame2
-let playerCharacter = null; // This will store the selected character ("A" for Liam or "B" for Eva),minigame2
-let player1;//minigame3
-let avoider1, avoider2, avoider3, avoider4, avoider5, avoider6;//minigame3
-let gamecontinueButton3;//minigame3
-let hiddenMessage = "Light waits for those who keep moving forward";  // Hidden sentence,hidden message
-let collectedWords = [];  // Store words collected from mini-games (light, forward, waits),hidden message
-let feedbackText = "";    // Feedback for correct/incorrect input,hidden message,hidden message
-let inputBox, submitButton, continueButton;//hidden message
-let userInput = ""; //hidden message
-let hasGuessed = false; // To track whether the user has already guessed, hidden message
-let endButton; //ending message
-let minipic1,minipic2,minipic3; //minicharacter
-let gembgm,bgm;
+let catcher; // minigame1
+let fallingObjects = []; // minigame1
+let score = 0; // minigame1
+let miniGameStarted = false; // minigame1
+let gamecontinueButton1; // minigame1
+let leftWall, rightWall; // minigame1
+let player, walls, obstacles; // minigame2
+let gamecontinueButton2; // minigame2
+let playerCharacter = null; // This will store the selected character ("A" for Liam or "B" for Eva), minigame2
+let player1; // minigame3
+let avoider1, avoider2, avoider3, avoider4, avoider5, avoider6; // minigame3
+let gamecontinueButton3; // minigame3
+let hiddenMessage = "Light waits for those who keep moving forward";  // Hidden sentence
+let collectedWords = [];  // Store words collected from mini-games (light, forward, waits)
+let feedbackText = "";    // Feedback for correct/incorrect input
+let inputBox, submitButton, continueButton; // hidden message
+let userInput = ""; // hidden message
+let hasGuessed = false; // To track whether the user has already guessed
+let endButton; // ending message
+let minipic1, minipic2, minipic3; // minicharacter
+let gembgm, bgm;
 
 /* PRELOAD LOADS FILES */
 function preload() {
@@ -56,29 +56,41 @@ function preload() {
   charImg1 = loadImage("assets/boy character.png");
   charImg2 = loadImage("assets/girl character.png");
   minigame = loadImage("assets/NAB Split-Faced - Natstone.jpeg");
-  bg0 = loadImage("assets/background.jpeg");
   minipic1 = loadImage("assets/bat.png");
-  minipic2= loadImage("assets/bear.png");
-  minipic3= loadImage("assets/Salamander.png");
-  gembgm=loadSound("music/diamond-found-190255.mp3");
-  bgm=loadSound("music/magical.mp3");
+  minipic2 = loadImage("assets/bear.png");
+  minipic3 = loadImage("assets/Salamander.png");
+  gembgm = loadSound("music/diamond-found-190255.mp3");
+  bgm = loadSound("music/magical.mp3");
 }
 
 /* SETUP RUNS ONCE */
 function setup() {
   createCanvas(600, 600);
   console.log("Setup executed");
+
+  // Trigger audio context to allow background music to play after a user gesture
+  userStartAudio();
+
+  // Create a start button to begin the game and start the music
+  startButton = createButton('Start Game');
+  startButton.position(250, 500);
+  startButton.mousePressed(startGame);
+  
   screen = 0;
+}
+
+/* Start Game and Music */
+function startGame() {
+  if (bgm) {
+    bgm.loop();
+    bgm.setVolume(0.3);
+  }
+  startButton.hide(); // Hide the start button once it's pressed
+  screen = 1; // Move to the next screen (game start)
 }
 
 /* DRAW LOOP REPEATS */
 function draw() {
-  // Start background music on first frame
-  if (frameCount === 1 && bgm) {
-    bgm.loop();
-    bgm.setVolume(0.3);
-  }
-
   console.log("Drawing screen:", screen);
 
   if (screen == 0) {
@@ -179,3 +191,25 @@ function draw() {
     console.log("Unrecognized screen:", screen);
   }
 }
+
+/* Additional Game Functions (Dummy placeholders for your existing code) */
+function startscreen() {
+  background(bg0);
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  fill(255);
+  text("Welcome to the Game!", width / 2, height / 2 - 100);
+  text("Click to Start", width / 2, height / 2);
+}
+
+function screen1() {
+  background(bg1);
+  // Your game screen logic here
+}
+
+function screen2() {
+  background(bg2);
+  // Your game screen logic here
+}
+
+// Other screens and functions...
