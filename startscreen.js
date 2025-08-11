@@ -1,7 +1,6 @@
 function startscreen() {
   background(bg0);
   fill(0);
-  textStyle(Arial);
   textAlign(CENTER);
   textSize(30);
   textFont("DMSerifDisplay")
