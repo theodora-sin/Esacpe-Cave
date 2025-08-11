@@ -34,6 +34,7 @@ function dillenma1() {
 
   if (choosebutton3.mouse.presses()) {
     gembgm.play();
+    gembgm.setVolume(0.3);
     choosebutton3.remove();
     choosebutton4.remove();
     choosebutton3 = null;
