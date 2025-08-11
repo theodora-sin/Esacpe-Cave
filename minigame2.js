@@ -110,10 +110,6 @@ function runMazeGame() {
   textSize(12);
   text('Use arrow keys to navigate', 30, height - 10);
 
-  if (playerCharacter && player) {
-    image(playerCharacter, 500,450,100,150);
-  }
-
   if (player) {
     player.vel.x = 0;
     player.vel.y = 0;
