@@ -150,7 +150,8 @@ function draw() {
           playerMove();
           resetAvoiders();
           checkCollisions();
-    } else if (screen == 18) {
+        }
+    }else if (screen == 18) {
       dillenma5();
     } else if (screen == 19) {
       transtionscreen9();
