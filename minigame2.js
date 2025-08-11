@@ -5,7 +5,6 @@ function mazegame() {
   background(bg9);
   fill(255);
   textAlign(CENTER);
-  textAlign(BOLD);
   textSize(30);
   text("Maze of Shadows", width / 2 - 20, 100);
     
