@@ -14,7 +14,10 @@ function dillenma5(){
 
   // Show character on bottom left (adjusted position)
   image(playerCharacter, 50, height - 200, 100, 150);
-
+  // Draw collected gems at the top
+  for (let i = 0; i < collectedGems.length; i++) {
+    image(collectedGems[i], 20 + i * 60, 20, 50, 50);
+  }
   // Create decision buttons once
   if (!choosebutton11 && !choosebutton12) {
     choosebutton11 = createSprite(width / 2 - 115, height / 2 + 100, 120, 50);
