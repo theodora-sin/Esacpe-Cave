@@ -1,7 +1,7 @@
 function startscreen() {
   background(bg0);
   fill(0);
-  textStyle(BOLD);
+  textStyle(Arial);
   textAlign(CENTER);
   textSize(30);
   textFont("DMSerifDisplay")
@@ -74,7 +74,6 @@ function screen2() {
   background(bg3);
   fill(255);
   textAlign(CENTER);
-  textAlign(BOLD);
   textFont("DM Serif Display");
   textSize(30);
   text("Preface", width / 2 - 13, 60);
