@@ -37,6 +37,7 @@ function dillenma2(){
     choosebutton6 = null;
     screen = 8;
   } else if (choosebutton6.mouse.presses()) {
+    gembgm.play();
     choosebutton5.remove();
     choosebutton6.remove();
     choosebutton5 = null;
