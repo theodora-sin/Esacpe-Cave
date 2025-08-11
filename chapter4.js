@@ -33,6 +33,8 @@ function dillenma4(){
   }
 
   if (choosebutton9.mouse.presses()) {
+    gembgm.play();
+    gembgm.setVolume(0.3);
     choosebutton9.remove();
     choosebutton10.remove();
     choosebutton9 = null;
@@ -61,8 +63,6 @@ function transtionscreen7(){
   textSize(21);
   textFont("Nunito");
   text("You earn a gem!", width / 2, 255);
-  gembgm.play();
-  gembgm.setVolume(0.3);
 
   if (playerCharacter) {
     image(playerCharacter, 250, 280,100, 150);
