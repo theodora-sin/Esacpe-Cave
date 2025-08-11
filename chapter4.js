@@ -13,7 +13,10 @@ function dillenma4(){
 
   // Show character on bottom left (adjusted position)
   image(playerCharacter, 50, height - 200, 100, 150);
-
+  // Draw collected gems at the top
+  for (let i = 0; i < collectedGems.length; i++) {
+    image(collectedGems[i], 20 + i * 60, 20, 50, 50);
+  }
   // Create decision buttons once
   if (!choosebutton9 && !choosebutton10) {
     choosebutton9 = createSprite(width / 2 - 115, height / 2 + 100, 120, 50);
@@ -43,11 +46,6 @@ function dillenma4(){
     screen = 16;
   }
 }
-  // Draw collected gems at the top
-  for (let i = 0; i < collectedGems.length; i++) {
-    image(collectedGems[i], 20 + i * 60, 20, 50, 50); // Display collected gems
-  }
-
 // transtionscreen7() function
 function transtionscreen7(){
   background(bg10);
