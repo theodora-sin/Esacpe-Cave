@@ -73,7 +73,6 @@ function setup() {
 
 /* DRAW LOOP REPEATS */
 function draw() {
-function draw() {
   // Start background music on first frame
   if (frameCount === 1 && bgm) {
     bgm.loop();
@@ -180,4 +179,3 @@ function draw() {
     console.log("Unrecognized screen:", screen);
   }
 }
-
