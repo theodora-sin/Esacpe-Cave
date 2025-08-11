@@ -59,7 +59,7 @@ function preload() {
   bg0 = loadImage("assets/background.jpeg");
   minipic1 = loadImage("assets/bat.png");
   minipic2= loadImage("assets/bear.png");
-  miniImg3= loadImage("assets/Salamander.png");
+  minipic3= loadImage("assets/Salamander.png");
   gembgm=loadSound("music/diamond-found-190255.mp3");
   bgm=loadSound("music/magical.mp3");
 }
