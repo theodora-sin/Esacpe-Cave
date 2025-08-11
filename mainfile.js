@@ -151,6 +151,15 @@ function draw() {
           resetAvoiders();
           checkCollisions();
         }
+      } catch (err) {
+        console.error("Error in screen 17 functions:", err);
+      }
+    } else if (screen == "lose") {
+      try {
+        drawLoseScreen();
+      } catch (err) {
+        console.error("Error in lose screen:", err);
+      }
     }else if (screen == 18) {
       dillenma5();
     } else if (screen == 19) {
